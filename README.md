@@ -1,4 +1,4 @@
-# Useage
+# Usage
 This the configuration in my git-bash (on Windows).  
 
 ```
