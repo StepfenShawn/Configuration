@@ -1,0 +1,59 @@
+{
+    "git.ignoreMissingGitWarning": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editorAssociations": {
+        "*.S": "mergeEditor.Input"
+    },
+    "explorer.confirmDelete": false,
+    "haskell.manageHLS": "PATH",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "window.zoomLevel": 2,
+    "search.followSymlinks": false,
+    "dateTime.clipboardFormat": "",
+    "dateTime.showDayOfMonth": true,
+    "dateTime.showMonth": true,
+    "workbench.colorTheme": "Vim Dark Hard",
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "editor.rulers": [
+            120
+        ],
+        "editor.semanticHighlighting.enabled": true
+    },
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 5px; margin: 0 auto;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div>",
+    "markdown-pdf.height": "60cm",
+    "markdown-pdf.width": "35cm",
+    "editor.fontSize": 13,
+    
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [],
+    "vim.insertModeKeyBindings": [],
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.operatorPendingModeKeyBindings": [],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    }
+}
