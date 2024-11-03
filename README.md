@@ -1,5 +1,5 @@
-# Useage
-This the configuration in my git-bash (on Windows).  
+# Usage
+This is the configuration in my git-bash (on Windows).  
 
 ```
 git clone git@github.com:StepfenShawn/Configuration.git
