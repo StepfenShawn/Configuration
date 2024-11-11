@@ -7,9 +7,10 @@ usage() {
 }
 
 dfs="hdfs://localhost:9000"
-tmp_dir="/E/HADOOP/hdata"
+tmp_dir="/E:/HADOOP/tmp"
+datanode_dir="/E:/HADOOP/datanode"
+namenode_dir="/E:/HADOOP/namenode"
 replication="1"
-HADOOP_MAPRED_HOME="/E/HADOOP"
 
 while getopts 'd:t:r:h' OPT; do
     case $OPT in
@@ -27,6 +28,15 @@ config_core_site() {
         <name>fs.defaultFS</name>
         <value>${dfs}</value>
     </property>
+     <property>
+        <name>dfs.name.dir</name>
+        <value>${namenode_dir}</value>
+    </property>
+
+    <property>
+        <name>dfs.data.dir</name>
+        <value>${datanode_dir}</value>
+    </property>
     <property>
         <name>hadoop.tmp.dir</name>
         <value>${tmp_dir}</value>
@@ -43,6 +53,14 @@ config_hdfs_site() {
         <name>dfs.replication</name>
         <value>${replication}</value>
     </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>${namenode_dir}</value>
+    </property>
+    <property>
+        <name>dfs.datanode.name.dir</name>
+        <value>${datanode_dir}</value>
+    </property>
 </configuration>
     """
     echo "$config" > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
@@ -52,20 +70,12 @@ config_mapred_site () {
     config="""
 <configuration>
     <property>
-        <name>mapreduce.framework.name</name>
-        <value>yarn</value>
+       <name>mapreduce.framework.name</name>
+       <value>yarn</value>
     </property>
     <property>
-        <name>yarn.app.mapreduce.am.env</name>
-        <value>HADOOP_MAPRED_HOME=${HADOOP_MAPRED_HOME}</value>
-    </property>
-    <property>
-        <name>mapreduce.map.env</name>
-        <value>HADOOP_MAPRED_HOME=${HADOOP_MAPRED_HOME}</value>
-    </property>
-    <property>
-        <name>mapreduce.reduce.env</name>
-        <value>HADOOP_MAPRED_HOME=${HADOOP_MAPRED_HOME}</value>
+       <name>mapred.job.tracker</name>
+       <value>hdfs://localhost:9001</value>
     </property>
 </configuration>
     """
