@@ -13,7 +13,7 @@ And then:
 cd Configuration
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
-cp .bashrc ~/.bashrc
+cat .bashrc >> ~/.bashrc
 cp .minttyrc ~/.minttyrc
 ```
 Or:  
